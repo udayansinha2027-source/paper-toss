@@ -2,7 +2,9 @@
 
 Flick a crumpled paper ball into the bin across seven rooms, from the office to a space station.
 
-**Play:** https://claude.ai/artifact/LST7rutuhwygKiZ1rHwH77
+**Play:** https://udayansinha2027-source.github.io/paper-toss/
+
+**Support:** if you enjoy it, [buy me a coffee](https://buymeacoffee.com/udayansinhf).
 
 The whole game is one file, `index.html`: canvas rendering, physics, sound and UI with no build step and no dependencies beyond two Google Fonts.
 

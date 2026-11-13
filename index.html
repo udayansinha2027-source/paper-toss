@@ -18,6 +18,7 @@
   --teal: oklch(0.80 0.10 195);
   --gold: oklch(0.84 0.15 85);
   --glass: oklch(0.18 0.025 245 / 0.86);
+  --coffee: #ffdd00;
   --display: "Archivo Black", "Arial Black", Impact, system-ui, sans-serif;
   --body: Manrope, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
 }
@@ -70,6 +71,15 @@ button:focus-visible,.world:focus-visible{outline:3px solid var(--coral);outline
 .brand .pt{width:34px;height:34px;border-radius:50%;background:var(--ink);color:var(--cream);display:grid;place-items:center;font-size:13px}
 .ghost-btn{border:1.5px solid var(--line);background:transparent;border-radius:999px;height:38px;padding:0 14px;font-weight:700;font-size:13px}
 .ghost-btn:hover{border-color:var(--ink)}
+.topbar{flex-wrap:wrap}
+.top-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.coffee{display:inline-flex;align-items:center;gap:7px;height:38px;padding:0 14px;border-radius:999px;background:var(--coffee);color:var(--ink);font-weight:800;font-size:13px;text-decoration:none;white-space:nowrap;box-shadow:inset 0 0 0 1.5px oklch(0.18 0.025 245 / 0.12)}
+.coffee:hover{filter:brightness(0.96)}
+.coffee:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
+.coffee svg{width:17px;height:17px;flex:none}
+.sc-coffee{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:14px;font-size:13.5px;font-weight:600;color:var(--ink-2)}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.foot a{color:var(--ink);font-weight:700}
 .hero{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:32px;align-items:end}
 .eyebrow{display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--line);border-radius:999px;padding:6px 12px;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
 .eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--coral)}
@@ -190,7 +200,10 @@ h2{font-family:var(--display);font-weight:400;font-size:clamp(30px,4.6vw,48px);l
     <div class="wrap">
       <div class="topbar">
         <div class="brand"><span class="pt">PT</span>PAPER TOSS</div>
-        <button class="ghost-btn" id="btnMute2" type="button">Sound on</button>
+        <div class="top-actions">
+          <a class="coffee" href="https://buymeacoffee.com/udayansinhf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h13v5a6 6 0 0 1-6 6h-1a6 6 0 0 1-6-6V8z" fill="currentColor"/><path d="M17 10h1.5a2.5 2.5 0 0 1 0 5H17" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 2.5c-.6.8.6 1.7 0 2.5M12 2.5c-.6.8.6 1.7 0 2.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>Buy me a coffee</a>
+          <button class="ghost-btn" id="btnMute2" type="button">Sound on</button>
+        </div>
       </div>
       <div class="hero">
         <div>
@@ -216,7 +229,7 @@ h2{font-family:var(--display);font-weight:400;font-size:clamp(30px,4.6vw,48px);l
         <p>Each world bends the arc a different way. Earn one star to unlock the next.</p>
       </div>
       <div class="grid" id="worldGrid"></div>
-      <div class="foot">Scores and stars are saved in this browser only.</div>
+      <div class="foot"><span>Scores and stars are saved in this browser only.</span><span>Enjoying the game? <a href="https://buymeacoffee.com/udayansinhf" target="_blank" rel="noopener">Buy me a coffee</a></span></div>
     </div>
   </div>
 
@@ -245,6 +258,10 @@ h2{font-family:var(--display);font-weight:400;font-size:clamp(30px,4.6vw,48px);l
           <button class="btn plain" id="btnCopy" type="button" style="height:38px;font-size:13px;align-self:flex-start">Copy score card</button>
           <textarea id="shareText" rows="3" readonly hidden></textarea>
           <div class="copied" id="copied"></div>
+        </div>
+        <div class="sc-coffee">
+          <span>Enjoying Paper Toss?</span>
+          <a class="coffee" href="https://buymeacoffee.com/udayansinhf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h13v5a6 6 0 0 1-6 6h-1a6 6 0 0 1-6-6V8z" fill="currentColor"/><path d="M17 10h1.5a2.5 2.5 0 0 1 0 5H17" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 2.5c-.6.8.6 1.7 0 2.5M12 2.5c-.6.8.6 1.7 0 2.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>Buy me a coffee</a>
         </div>
       </div>
     </div>
